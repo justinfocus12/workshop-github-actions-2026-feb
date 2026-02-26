@@ -1,7 +1,7 @@
 name: Hello World Example
 
 on: 
-  workflow_dispatch: 
+  workflow_dispatch:  # nothing here means "manual" (could also be "commit")
 
 jobs:
   hello_world_job:

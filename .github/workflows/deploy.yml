@@ -1,0 +1,19 @@
+name: Deploy Workshop Workflow
+
+on: 
+  workfow_dispatch: 
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-format:
+    name: Lint + format
+    uses: ./.github/workflows/lint-and-format.yml # note this starts from the top-level directory, which is where it gets called from 
+  
+  version:
+    name: Compute version
+    uses: ./.github/workflows/version.yml
+
+
+
