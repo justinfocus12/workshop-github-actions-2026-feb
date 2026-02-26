@@ -1,7 +1,7 @@
 name: Deploy Workshop Workflow
 
 on: 
-  workfow_dispatch:
+  workflow_dispatch:
 
 permissions:
   contents: read
