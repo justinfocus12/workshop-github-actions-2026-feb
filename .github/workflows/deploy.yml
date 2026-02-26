@@ -15,9 +15,12 @@ jobs:
     name: Compute version
     uses: ./.github/workflows/version.yml
 
-  #release:
-  #  name: Release version
-  #  uses: ./.github/workflows/release.yml
+  release:
+    name: Release version
+    needs: [lint-and-format, version] # which jobs should run before this one 
+    uses: ./.github/workflows/release.yml
+    with:
+      app_version: ${{ needs.version.outputs.app_version }}
 
 
 
